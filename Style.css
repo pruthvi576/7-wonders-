@@ -54,7 +54,7 @@ body {
 }
 
 .nav-logo {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
@@ -75,7 +75,7 @@ body {
   border-radius: 0;
   transition: all 0.3s ease;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-left: 200px;
   font-family: 'Times New Roman', serif;
 }
@@ -93,7 +93,7 @@ body {
   padding: 0;
   border-radius: 0;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   transition: all 0.3s ease;
   border: none;
   height: auto;
@@ -118,7 +118,7 @@ body {
   padding: 0;
   border-radius: 0;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   transition: all 0.3s ease;
   border: none;
   height: auto;
@@ -144,7 +144,7 @@ body {
 
 /* Sign In Section Styles */
 .signin-section {
-  background-image: url('https://i.imgur.com/your-background-image.jpg');
+  background-image: url('image.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
