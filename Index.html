@@ -1,63 +1,396 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>7 Wonders</title>
+  <title>7 Wonders - Explore Ancient Marvels</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+      <p>Discovering Wonders...</p>
+    </div>
+  </div>
+
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-left">
-        <a href="Index.html" class="nav-logo">7 Wonders</a>
+        <a href="Index.html" class="nav-logo">
+          <i class="fas fa-landmark"></i>
+          7 Wonders
+        </a>
         <a href="Index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="#wonders" class="nav-link">Explore</a>
       </div>
       <div class="nav-right">
-        <a href="signup.html" class="signup-btn">Sign Up</a>
-        <a href="#main-content" class="get-started-btn">Get Started</a>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search wonders..." class="search-input">
+          <i class="fas fa-search search-icon"></i>
+        </div>
+        <a href="signup.html" class="signup-btn">
+          <i class="fas fa-user-plus"></i>
+          Sign Up
+        </a>
+        <a href="login.html" class="login-btn">
+          <i class="fas fa-sign-in-alt"></i>
+          Login
+        </a>
       </div>
     </div>
   </nav>
   
+  
+  <!-- Hero Section -->
   <section class="hero-section">
+    <div class="hero-background">
+      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" alt="Ancient Wonders Background" class="hero-bg-image">
+    </div>
+    <div class="hero-overlay"></div>
     <div class="hero-container">
-      <div class="hero-text">
-        <h2>Explore the Magnificent 7 Wonders</h2>
-        <p>Discover the most breathtaking architectural marvels and historical sites that showcase human ingenuity and natural beauty. Journey through time and across continents to explore these incredible wonders that have captivated humanity for generations.</p>
-        <p>From ancient civilizations to modern masterpieces, each wonder tells a unique story of culture, dedication, and artistic brilliance.</p>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Discover the 
+          <span class="highlight">7 Wonders</span>
+          of the World
+        </h1>
+        <p class="hero-description">
+          Embark on an extraordinary journey through time and explore the most magnificent 
+          architectural marvels that showcase human ingenuity, creativity, and cultural heritage.
+        </p>
+        <div class="hero-actions">
+          <a href="#wonders" class="cta-button primary">
+            <i class="fas fa-compass"></i>
+            Explore Wonders
+          </a>
+          <a href="about.html" class="cta-button secondary">
+            <i class="fas fa-info-circle"></i>
+            About Us
+          </a>
+        </div>
       </div>
-      <div class="hero-image">
-        <img src="https://media.istockphoto.com/id/698902340/photo/world-landmarks-photo-collage-on-vintage-tes-sepia-textured-background-travel-tourism-and.jpg?s=612x612&w=0&k=20&c=EPs1neiltU_StES8iVyk7oxmeDbsyaA1CuF5SC3oHVg=" alt="World Landmarks Collage" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Journey Through History</h2>
+        <p>Experience the wonders that have stood the test of time and continue to inspire millions around the globe.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-history"></i>
+          </div>
+          <h3>Ancient Heritage</h3>
+          <p>Explore structures that have witnessed millennia of human civilization and cultural evolution.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3>Virtual Tours</h3>
+          <p>Experience immersive 360° tours and high-resolution imagery of each magnificent wonder.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>Rich Stories</h3>
+          <p>Discover fascinating stories, legends, and historical facts behind each wonder.</p>
+        </div>
       </div>
     </div>
   </section>
   
-  <div class="main-content" id="main-content">
-    <div class="wonders-grid">
-      <div class="wonder-card">
-        <a href="Wall.html">Great Wall of China</a>
+  
+  <!-- Wonders Section -->
+  <section id="wonders" class="wonders-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>The Seven Wonders</h2>
+        <p>Click on any wonder to discover its history, architecture, and cultural significance</p>
       </div>
-      <div class="wonder-card">
-        <a href="Redeemer.html">Christ the Redeemer</a>
-      </div>
-      <div class="wonder-card">
-        <a href="Machu.html">Machu Picchu</a>
-      </div>
-      <div class="wonder-card">
-        <a href="Itza.html">Chichen Itza</a>
-      </div>
-      <div class="wonder-card">
-        <a href="Colosseum.html">Roman Colosseum</a>
-      </div>
-      <div class="wonder-card">
-        <a href="Taj.html">Taj Mahal</a>
-      </div>
-      <div class="wonder-card">
-        <a href="Petra.html">Petra</a>
-      </div>
-      <div class="travel-image">
-        <img src="https://www.shutterstock.com/image-vector/collection-travel-icons-doodle-style-260nw-2467052899.jpg" alt="Travel Icons" />
+      
+      <div class="wonders-grid" id="wondersGrid">
+        <div class="wonder-card" data-wonder="great-wall">
+          <div class="wonder-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/20090529_Great_Wall_8185.jpg/1200px-20090529_Great_Wall_8185.jpg" alt="Great Wall of China" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zNWVtIj5HcmVhdCBXYWxsPC90ZXh0Pjwvc3ZnPg=='">
+            <div class="wonder-overlay">
+              <div class="wonder-info">
+                <h3>Great Wall of China</h3>
+                <p class="wonder-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  China
+                </p>
+                <p class="wonder-description">An ancient fortification built to protect Chinese states from invasions</p>
+                <div class="wonder-stats">
+                  <span><i class="fas fa-ruler"></i> 13,000 miles</span>
+                  <span><i class="fas fa-calendar"></i> 7th century BC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="Wall.html" class="wonder-link">Explore</a>
+        </div>
+
+        <div class="wonder-card" data-wonder="christ-redeemer">
+          <div class="wonder-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Christ_the_Redeemer_-_Cristo_Redentor.jpg/1200px-Christ_the_Redeemer_-_Cristo_Redentor.jpg" alt="Christ the Redeemer" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zNWVtIj5DaHJpc3QgUmVkZWVtZXI8L3RleHQ+PC9zdmc+'">
+            <div class="wonder-overlay">
+              <div class="wonder-info">
+                <h3>Christ the Redeemer</h3>
+                <p class="wonder-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Rio de Janeiro, Brazil
+                </p>
+                <p class="wonder-description">Art Deco statue of Jesus Christ overlooking Rio de Janeiro</p>
+                <div class="wonder-stats">
+                  <span><i class="fas fa-ruler"></i> 98 feet tall</span>
+                  <span><i class="fas fa-calendar"></i> 1931 AD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="Redeemer.html" class="wonder-link">Explore</a>
+        </div>
+
+        <div class="wonder-card" data-wonder="machu-picchu">
+          <div class="wonder-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Machu_Picchu%2C_Peru.jpg/1200px-Machu_Picchu%2C_Peru.jpg" alt="Machu Picchu" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zNWVtIj5NYWNodSBQaWNjaHU8L3RleHQ+PC9zdmc+'">
+            <div class="wonder-overlay">
+              <div class="wonder-info">
+                <h3>Machu Picchu</h3>
+                <p class="wonder-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Cusco, Peru
+                </p>
+                <p class="wonder-description">Ancient Incan citadel perched high in the Andes Mountains</p>
+                <div class="wonder-stats">
+                  <span><i class="fas fa-mountain"></i> 7,972 ft</span>
+                  <span><i class="fas fa-calendar"></i> 1450 AD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="Machu.html" class="wonder-link">Explore</a>
+        </div>
+
+        <div class="wonder-card" data-wonder="chichen-itza">
+          <div class="wonder-image">
+            <img src="https://cdn.britannica.com/95/94395-050-FCBE95B6/Chichen-Itza-Yucatan-Mexico.jpg" alt="Chichen Itza" onerror="this.src='https://images.nationalgeographic.org/wpf/media-live/photos/000/090/overrides/ancient-mexico-chichen-itza-pyramid_9096_600x450.jpg'">>
+            <div class="wonder-overlay">
+              <div class="wonder-info">
+                <h3>Chichen Itza</h3>
+                <p class="wonder-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Yucatan, Mexico
+                </p>
+                <p class="wonder-description">Large pre-Columbian archaeological site built by Maya civilization</p>
+                <div class="wonder-stats">
+                  <span><i class="fas fa-ruler"></i> 79 feet tall</span>
+                  <span><i class="fas fa-calendar"></i> 600 AD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="Itza.html" class="wonder-link">Explore</a>
+        </div>
+
+        <div class="wonder-card" data-wonder="colosseum">
+          <div class="wonder-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/1200px-Colosseo_2020.jpg" alt="Roman Colosseum" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zNWVtIj5Db2xvc3NldW08L3RleHQ+PC9zdmc+'">
+            <div class="wonder-overlay">
+              <div class="wonder-info">
+                <h3>Roman Colosseum</h3>
+                <p class="wonder-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Rome, Italy
+                </p>
+                <p class="wonder-description">Ancient amphitheatre where gladiators fought for entertainment</p>
+                <div class="wonder-stats">
+                  <span><i class="fas fa-users"></i> 50,000 capacity</span>
+                  <span><i class="fas fa-calendar"></i> 80 AD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="Colosseum.html" class="wonder-link">Explore</a>
+        </div>
+
+        <div class="wonder-card" data-wonder="taj-mahal">
+          <div class="wonder-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Taj_Mahal%2C_Agra%2C_India_edit3.jpg/1200px-Taj_Mahal%2C_Agra%2C_India_edit3.jpg" alt="Taj Mahal" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zNWVtIj5UYWogTWFoYWw8L3RleHQ+PC9zdmc+'">
+            <div class="wonder-overlay">
+              <div class="wonder-info">
+                <h3>Taj Mahal</h3>
+                <p class="wonder-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Agra, India
+                </p>
+                <p class="wonder-description">Ivory-white marble mausoleum built as a tomb for Mumtaz Mahal</p>
+                <div class="wonder-stats">
+                  <span><i class="fas fa-ruler"></i> 240 feet tall</span>
+                  <span><i class="fas fa-calendar"></i> 1653 AD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="Taj.html" class="wonder-link">Explore</a>
+        </div>
+
+        <div class="wonder-card" data-wonder="petra">
+          <div class="wonder-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/The_Monastery%2C_Petra%2C_Jordan8.jpg/1200px-The_Monastery%2C_Petra%2C_Jordan8.jpg" alt="Petra" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zNWVtIj5QZXRyYTwvdGV4dD48L3N2Zz4='">
+            <div class="wonder-overlay">
+              <div class="wonder-info">
+                <h3>Petra</h3>
+                <p class="wonder-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Ma'an, Jordan
+                </p>
+                <p class="wonder-description">Archaeological city famous for its rock-cut architecture</p>
+                <div class="wonder-stats">
+                  <span><i class="fas fa-mountain"></i> Rose City</span>
+                  <span><i class="fas fa-calendar"></i> 312 BC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="Petra.html" class="wonder-link">Explore</a>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources" class="resources-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Educational Resources</h2>
+        <p>Explore documentaries, research papers, and virtual tours about the Seven Wonders</p>
+      </div>
+      
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h3><i class="fas fa-play-circle"></i> Documentaries</h3>
+          <div class="resource-links">
+            <a href="https://www.youtube.com/watch?v=6OaLI78OyiA" target="_blank">
+              <i class="fab fa-youtube"></i>
+              "Great Wall Mysteries" - National Geographic
+            </a>
+            <a href="https://www.youtube.com/watch?v=yiTXLm8DhZs" target="_blank">
+              <i class="fab fa-youtube"></i>
+              "Machu Picchu Secrets" - Discovery
+            </a>
+            <a href="https://www.youtube.com/watch?v=TdGTbADBJjM" target="_blank">
+              <i class="fab fa-youtube"></i>
+              "Roman Engineering" - History Channel
+            </a>
+          </div>
+        </div>
+        
+        <div class="resource-card">
+          <h3><i class="fas fa-globe"></i> Virtual Tours</h3>
+          <div class="resource-links">
+            <a href="https://www.google.com/maps/@40.4319077,116.5703749,3a,75y" target="_blank">
+              <i class="fas fa-street-view"></i>
+              Great Wall 360° Tour
+            </a>
+            <a href="https://www.google.com/maps/@-13.1631412,-72.5449629,3a,75y" target="_blank">
+              <i class="fas fa-mountain"></i>
+              Machu Picchu Virtual Visit
+            </a>
+            <a href="https://www.google.com/maps/@41.8902102,12.4922309,3a,75y" target="_blank">
+              <i class="fas fa-landmark"></i>
+              Colosseum Interior
+            </a>
+          </div>
+        </div>
+        
+        <div class="resource-card">
+          <h3><i class="fas fa-graduation-cap"></i> Educational</h3>
+          <div class="resource-links">
+            <a href="https://www.coursera.org/learn/archaeology" target="_blank">
+              <i class="fas fa-chalkboard-teacher"></i>
+              Archaeology Course - Coursera
+            </a>
+            <a href="https://www.edx.org/course/ancient-history" target="_blank">
+              <i class="fas fa-laptop"></i>
+              Ancient History - EdX
+            </a>
+            <a href="https://www.khanacademy.org/humanities/world-history" target="_blank">
+              <i class="fas fa-book"></i>
+              World History - Khan Academy
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>7 Wonders</h3>
+          <p>Exploring the world's most magnificent architectural marvels and cultural treasures.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#wonders">All Wonders</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#">Virtual Tours</a></li>
+            <li><a href="#">Travel Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Photography</a></li>
+            <li><a href="#">Educational</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 7 Wonders. All rights reserved. Made with ❤️ for history enthusiasts.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Wonder Modal -->
+  <div id="wonderModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modalContent"></div>
+    </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
