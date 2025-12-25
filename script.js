@@ -2,40 +2,74 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
-    initLoadingScreen();
     initNavbar();
     initSearch();
     initScrollAnimations();
     initWonderCards();
     initSmoothScrolling();
     initParallaxEffect();
+    initTheme();
 });
 
-// Loading Screen
-function initLoadingScreen() {
-    const loadingScreen = document.getElementById('loading-screen');
-    
-    window.addEventListener('load', function() {
-        setTimeout(() => {
-            loadingScreen.classList.add('fade-out');
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 500);
-        }, 1500);
+// Theme toggle: create a toggle in the navbar, persist choice in localStorage
+function initTheme() {
+    const body = document.body;
+    const saved = localStorage.getItem('site-theme');
+    if (saved === 'light') body.classList.add('light-theme');
+
+    // Insert toggle button into navbar if not present
+    const navRight = document.querySelector('.nav-right');
+    if (!navRight) return;
+
+    let btn = document.getElementById('themeToggle');
+    if (!btn) {
+        btn = document.createElement('button');
+        btn.id = 'themeToggle';
+        btn.className = 'theme-toggle';
+        btn.title = 'Toggle theme';
+        btn.setAttribute('aria-label', 'Toggle theme');
+        btn.innerHTML = '<i class="fas"></i>';
+        navRight.appendChild(btn);
+    }
+
+    function updateIcon() {
+        const icon = btn.querySelector('i');
+        if (document.body.classList.contains('light-theme')) {
+            icon.className = 'fas fa-sun';
+        } else {
+            icon.className = 'fas fa-moon';
+        }
+    }
+
+    btn.addEventListener('click', () => {
+        const isLight = body.classList.toggle('light-theme');
+        localStorage.setItem('site-theme', isLight ? 'light' : 'dark');
+        updateIcon();
     });
+
+    updateIcon();
 }
 
 // Navbar Scroll Effect
 function initNavbar() {
     const navbar = document.querySelector('.navbar');
+    let ticking = false;
     
-    window.addEventListener('scroll', function() {
+    const updateNavbar = debounce(function() {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-    });
+        ticking = false;
+    }, 10);
+    
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(updateNavbar);
+            ticking = true;
+        }
+    }, { passive: true });
 }
 
 // Search Functionality
@@ -170,20 +204,26 @@ function initWonderCards() {
             }
         });
         
-        // Parallax effect for wonder images
+        // Simplified parallax effect for wonder images (throttled)
+        let mouseMoveTimeout;
         card.addEventListener('mousemove', function(e) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
+            if (mouseMoveTimeout) return;
             
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = (y - centerY) / 10;
-            const rotateY = (centerX - x) / 10;
-            
-            const img = this.querySelector('.wonder-image img');
-            img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
+            mouseMoveTimeout = setTimeout(() => {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 20; // Reduced sensitivity
+                const rotateY = (centerX - x) / 20;
+                
+                const img = this.querySelector('.wonder-image img');
+                img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+                mouseMoveTimeout = null;
+            }, 16); // Throttle to ~60fps
         });
         
         card.addEventListener('mouseleave', function() {
@@ -219,20 +259,18 @@ function initParallaxEffect() {
     const heroSection = document.querySelector('.hero-section');
     const heroContent = document.querySelector('.hero-content');
     
-    window.addEventListener('scroll', function() {
+    const handleScroll = debounce(function() {
         const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
-        
-        if (heroSection) {
-            heroSection.style.transform = `translateY(${rate}px)`;
-        }
-        
-        // Fade out hero content on scroll
+        // Keep hero element fixed in place (no vertical translate) to prevent
+        // a visible gap appearing above the next section when scrolling.
+        // Only adjust hero content opacity (fade) if present.
         if (heroContent) {
-            const opacity = 1 - scrolled / window.innerHeight;
+            const opacity = 1 - scrolled / (window.innerHeight * 0.8);
             heroContent.style.opacity = Math.max(opacity, 0);
         }
-    });
+    }, 16); // ~60fps
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
 }
 
 // Dynamic Stats Counter
@@ -361,13 +399,9 @@ function debounce(func, wait) {
     return function executedFunction(...args) {
         const later = () => {
             clearTimeout(timeout);
-            func(...args);
+            func.apply(this, args);
         };
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
 }
-
-// Apply debounce to scroll-heavy functions
-const debouncedParallax = debounce(initParallaxEffect, 10);
-window.addEventListener('scroll', debouncedParallax);

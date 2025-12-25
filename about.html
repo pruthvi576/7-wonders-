@@ -39,30 +39,227 @@
   <section id="about" class="about-section" style="padding-top: 120px;">
     <div class="container">
       <div class="section-header">
-        <h2>Journey Through History</h2>
-        <p>Experience the wonders that have stood the test of time and continue to inspire millions around the globe.</p>
+        <h2>About 7 Wonders</h2>
+        <p>Learn more about our mission, the wonders we showcase, and the team behind this project.</p>
       </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-history"></i>
-          </div>
-          <h3>Ancient Heritage</h3>
-          <p>Explore structures that have witnessed millennia of human civilization and cultural evolution.</p>
+      
+      <!-- Tabs Navigation -->
+      <div class="tabs-container">
+        <div class="tabs-nav">
+          <button class="tab-btn active" onclick="openTab(event, 'our-mission')">Our Mission</button>
+          <button class="tab-btn" onclick="openTab(event, 'the-wonders')">The Wonders</button>
+          <button class="tab-btn" onclick="openTab(event, 'developer-info')">Developer</button>
+          <button class="tab-btn" onclick="openTab(event, 'contact-us')">Contact</button>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-camera"></i>
+
+        <!-- Tab Content -->
+        <div id="our-mission" class="tab-content active">
+          <div class="tab-grid">
+            <div class="tab-text">
+              <h3>Our Mission</h3>
+              <p>We believe that the Seven Wonders of the World represent humanity's greatest architectural achievements and cultural treasures. Our mission is to make these incredible sites accessible to everyone through immersive digital experiences.</p>
+              
+              <h4>What We Offer:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Detailed historical information about each wonder</li>
+                <li><i class="fas fa-check"></i> High-quality imagery and virtual tours</li>
+                <li><i class="fas fa-check"></i> Cultural context and significance</li>
+                <li><i class="fas fa-check"></i> Interactive learning experiences</li>
+              </ul>
+              
+              <p>Whether you're a student, traveler, or history enthusiast, we're here to inspire your journey through these magnificent monuments that have captivated the world for centuries.</p>
+            </div>
+            <div class="tab-image">
+              <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ancient Architecture" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QW5jaWVudCBJbWFnZTwvdGV4dD48L3N2Zz4='">
+            </div>
           </div>
-          <h3>Virtual Tours</h3>
-          <p>Experience immersive 360° tours and high-resolution imagery of each magnificent wonder.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-book-open"></i>
+
+        <div id="the-wonders" class="tab-content">
+          <div class="wonders-overview">
+            <h3>The Seven Wonders of the World</h3>
+            <p>These magnificent structures were chosen through a global poll and represent the pinnacle of human architectural achievement.</p>
+            
+            <div class="wonders-list">
+              <div class="wonder-item">
+                <i class="fas fa-mountain"></i>
+                <div>
+                  <h4>Great Wall of China</h4>
+                  <p>An ancient fortification system stretching over 13,000 miles across northern China.</p>
+                </div>
+              </div>
+              <div class="wonder-item">
+                <i class="fas fa-cross"></i>
+                <div>
+                  <h4>Christ the Redeemer</h4>
+                  <p>A monumental statue of Jesus Christ overlooking Rio de Janeiro, Brazil.</p>
+                </div>
+              </div>
+              <div class="wonder-item">
+                <i class="fas fa-mountain"></i>
+                <div>
+                  <h4>Machu Picchu</h4>
+                  <p>An ancient Incan city set high in the Andes Mountains of Peru.</p>
+                </div>
+              </div>
+              <div class="wonder-item">
+                <i class="fas fa-step-forward"></i>
+                <div>
+                  <h4>Chichen Itza</h4>
+                  <p>A large pre-Columbian archaeological site built by the Maya civilization in Mexico.</p>
+                </div>
+              </div>
+              <div class="wonder-item">
+                <i class="fas fa-building"></i>
+                <div>
+                  <h4>Roman Colosseum</h4>
+                  <p>An ancient amphitheatre in Rome, Italy, known for gladiatorial contests.</p>
+                </div>
+              </div>
+              <div class="wonder-item">
+                <i class="fas fa-mosque"></i>
+                <div>
+                  <h4>Taj Mahal</h4>
+                  <p>An ivory-white marble mausoleum in Agra, India, built as a tomb of love.</p>
+                </div>
+              </div>
+              <div class="wonder-item">
+                <i class="fas fa-university"></i>
+                <div>
+                  <h4>Petra</h4>
+                  <p>An ancient city carved into rose-red cliffs in southern Jordan.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <h3>Rich Stories</h3>
-          <p>Discover fascinating stories, legends, and historical facts behind each wonder.</p>
+        </div>
+
+        <div id="developer-info" class="tab-content">
+          <div class="developer-section">
+            <div class="developer-header">
+              <div class="developer-avatar">
+                <i class="fas fa-user-circle"></i>
+              </div>
+              <div class="developer-intro">
+                <h3>Meet the Developer</h3>
+                <p class="developer-name">Your Name Here</p>
+                <p class="developer-title">Web Developer & History Enthusiast</p>
+              </div>
+            </div>
+            
+            <div class="developer-content">
+              <div class="developer-bio">
+                <h4>About Me</h4>
+                <p>Hello! I'm passionate about combining technology with history to create engaging digital experiences. This 7 Wonders project represents my love for both web development and the incredible achievements of human civilization.</p>
+                
+                <h4>My Journey</h4>
+                <p>As a web developer with a deep appreciation for history and architecture, I created this website to share the beauty and significance of the Seven Wonders with fellow enthusiasts around the world.</p>
+              </div>
+              
+              <div class="developer-skills">
+                <h4>Technical Skills</h4>
+                <div class="skills-grid">
+                  <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
+                  </div>
+                  <div class="skill-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Responsive Design</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="developer-contact">
+                <h4>Connect With Me</h4>
+                <div class="contact-links">
+                  <a href="mailto:your.email@example.com" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    Email Me
+                  </a>
+                  <a href="#" class="contact-link">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                  </a>
+                  <a href="#" class="contact-link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="contact-us" class="tab-content">
+          <div class="contact-section">
+            <h3>Get in Touch</h3>
+            <p>Have questions, suggestions, or just want to share your thoughts about the Seven Wonders? We'd love to hear from you!</p>
+            
+            <div class="contact-grid">
+              <div class="contact-info">
+                <div class="contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <div>
+                    <h4>Email</h4>
+                    <p>your.email@example.com</p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <i class="fas fa-clock"></i>
+                  <div>
+                    <h4>Response Time</h4>
+                    <p>Usually within 24 hours</p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <i class="fas fa-heart"></i>
+                  <div>
+                    <h4>Purpose</h4>
+                    <p>Educational & Cultural Appreciation</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="contact-form">
+                <form>
+                  <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                      <option value="general">General Inquiry</option>
+                      <option value="feedback">Feedback</option>
+                      <option value="collaboration">Collaboration</option>
+                      <option value="technical">Technical Issue</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Tell us about your thoughts on the Seven Wonders..."></textarea>
+                  </div>
+                  <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -117,5 +314,27 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Tab functionality
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      
+      // Hide all tab content
+      tabcontent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
+      }
+      
+      // Remove active class from all tab buttons
+      tablinks = document.getElementsByClassName("tab-btn");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+      }
+      
+      // Show the selected tab content and mark button as active
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
 </body>
 </html>

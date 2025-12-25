@@ -8,14 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Loading Screen -->
-  <div id="loading-screen" class="loading-screen">
-    <div class="loading-spinner">
-      <div class="spinner"></div>
-      <p>Discovering Wonders...</p>
-    </div>
-  </div>
-
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-left">
@@ -48,9 +40,8 @@
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-background">
-      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" alt="Ancient Wonders Background" class="hero-bg-image">
+      <img src="https://wallpapers.com/images/hd/dark-nature-wfvuga4py1sgn29r.jpg" alt="Ancient Wonders Background" class="hero-bg-image">
     </div>
-    <div class="hero-overlay"></div>
     <div class="hero-container">
       <div class="hero-content">
         <h1 class="hero-title">
@@ -79,31 +70,80 @@
   <!-- About Section -->
   <section id="about" class="about-section">
     <div class="container">
-      <div class="section-header">
-        <h2>Journey Through History</h2>
-        <p>Experience the wonders that have stood the test of time and continue to inspire millions around the globe.</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-history"></i>
+      <div class="about-hero">
+        <div class="about-content">
+          <h2>Why Explore the 7 Wonders?</h2>
+          <p class="about-subtitle">Discover what makes these architectural masterpieces truly extraordinary and worth experiencing.</p>
+          
+          <div class="about-features">
+            <div class="feature-row">
+              <div class="feature-icon-large">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div class="feature-content">
+                <h3>Global Heritage</h3>
+                <p>Each wonder represents a unique culture and civilization, showcasing the diversity of human achievement across continents and time periods.</p>
+              </div>
+            </div>
+            
+            <div class="feature-row reverse">
+              <div class="feature-content">
+                <h3>Iconic Monuments</h3>
+                <p>These aren't just buildings - they're symbols of human ingenuity that have inspired generations and continue to captivate millions of visitors.</p>
+              </div>
+              <div class="feature-icon-large">
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            
+            <div class="feature-row">
+              <div class="feature-icon-large">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="feature-content">
+                <h3>Personal Journey</h3>
+                <p>Every wonder tells a story that connects us to our shared human heritage and the dreams of our ancestors who built these magnificent structures.</p>
+              </div>
+            </div>
           </div>
-          <h3>Ancient Heritage</h3>
-          <p>Explore structures that have witnessed millennia of human civilization and cultural evolution.</p>
+          
+          <div class="about-cta">
+            <a href="about.html" class="learn-more-btn">
+              <i class="fas fa-arrow-right"></i>
+              Learn More About Us
+            </a>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-camera"></i>
+        
+        <div class="about-visual">
+          <div class="wonder-showcase">
+            <div class="showcase-item">
+              <img src="https://images.pexels.com/photos/1423580/pexels-photo-1423580.jpeg?cs=srgb&dl=pexels-jplenio-1423580.jpg&fm=jpg" alt="Great Wall" />
+              <span>Great Wall</span>
+            </div>
+            <div class="showcase-item">
+              <img src="https://media.istockphoto.com/id/1208049833/photo/amazing-view-on-the-taj-mahal-in-sunset-light-with-reflection-in-water-the-taj-mahal-is-an.jpg?s=612x612&w=0&k=20&c=rNo7Q1k7SSaH6T09HShS57X9dw2QkuRBcnP2dNxAGIE=" alt="Taj Mahal" />
+              <span>Taj Mahal</span>
+            </div>
+            <div class="showcase-item">
+              <img src="https://wallpapercat.com/w/full/e/3/2/776532-3840x1080-desktop-dual-screen-the-colosseum-background.jpg" alt="Colosseum" />
+              <span>Colosseum</span>
+            </div>
           </div>
-          <h3>Virtual Tours</h3>
-          <p>Experience immersive 360° tours and high-resolution imagery of each magnificent wonder.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-book-open"></i>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">7</div>
+              <div class="stat-label">Wonders</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">2000+</div>
+              <div class="stat-label">Years of History</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">5</div>
+              <div class="stat-label">Continents</div>
+            </div>
           </div>
-          <h3>Rich Stories</h3>
-          <p>Discover fascinating stories, legends, and historical facts behind each wonder.</p>
         </div>
       </div>
     </div>
@@ -184,7 +224,7 @@
 
         <div class="wonder-card" data-wonder="chichen-itza">
           <div class="wonder-image">
-            <img src="https://cdn.britannica.com/95/94395-050-FCBE95B6/Chichen-Itza-Yucatan-Mexico.jpg" alt="Chichen Itza" onerror="this.src='https://images.nationalgeographic.org/wpf/media-live/photos/000/090/overrides/ancient-mexico-chichen-itza-pyramid_9096_600x450.jpg'">>
+            <img src="https://www.historyhit.com/app/uploads/bis-images/5149657/Chichen-Itza-788x537.jpg?x10081" alt="Chichen Itza" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2hpY2hlbiBJdHphPC90ZXh0Pjwvc3ZnPg=='">
             <div class="wonder-overlay">
               <div class="wonder-info">
                 <h3>Chichen Itza</h3>
